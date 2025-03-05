@@ -17,6 +17,14 @@ repositories {
 	maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
 	maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
 	maven { url = "https://maven.tterrag.com/" } // Flywheel
+	maven {
+		// Add curse maven to repositories
+		name = "Curse Maven"
+		url = "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	} // Timeless and Classics Zero Curse Maven
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
 	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
 
@@ -55,6 +63,8 @@ dependencies {
 
 	// Development QOL
 	modLocalRuntime("com.terraformersmc:modmenu:$modmenu_version")
+
+	modImplementation "curse.maven:timeless-and-classics-zero-1028108:6064966"
 
 	// Recipe Viewers - Create Fabric supports JEI, REI, and EMI.
 	// See root gradle.properties to choose which to use at runtime.

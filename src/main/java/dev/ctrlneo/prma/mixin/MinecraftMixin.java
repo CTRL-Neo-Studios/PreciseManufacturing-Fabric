@@ -1,6 +1,6 @@
-package com.example.modid.mixin;
+package dev.ctrlneo.prma.mixin;
 
-import com.example.modid.ExampleMod;
+import dev.ctrlneo.prma.Prma;
 
 import net.minecraft.client.Minecraft;
 
@@ -15,6 +15,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MinecraftMixin {
 	@Inject(method = "<init>", at = @At("TAIL"))
 	private void example$init(GameConfig gameConfig, CallbackInfo ci) {
-		ExampleMod.LOGGER.info("Hello from {}", ExampleMod.NAME);
+		Prma.LOGGER.info("Hello from {}", Prma.NAME);
 	}
 }
